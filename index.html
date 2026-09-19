@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Caraoke Harness</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="brand">Caraoke Harness</div>
+    <div id="stars" class="meta">☆☆☆☆☆</div>
+    <div id="meta" class="meta"></div>
+  </header>
+
+  <main class="stage">
+    <section class="player-col">
+      <div id="yt"></div>
+      <div class="now">
+        <h2 id="title">Never Enough</h2>
+        <p id="artist">The Greatest Showman · Sing King</p>
+      </div>
+    </section>
+    <section class="lyrics" id="stage">
+      <div class="score-chip">SCORE<br><strong id="scoreVal">0000</strong></div>
+      <div class="line prev" id="prev"></div>
+      <div class="line curr" id="curr">Park the car. Hit Sing Now.</div>
+      <div class="line next" id="next"></div>
+      <div class="bars" id="bars" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="controls">
+      <input id="q" placeholder="Artist - Title, or paste a YouTube URL" />
+      <button class="primary" id="searchBtn">Queue / YouTube</button>
+      <button id="appleBtn">Apple Music</button>
+      <button id="playBtn">Play</button>
+      <button id="pauseBtn">Pause</button>
+      <button id="nextBtn">Next</button>
+      <button id="micBtn">Mic</button>
+      <button id="tvBtn">TV mode</button>
+      <label class="meta">Lyric offset
+        <input id="offset" type="range" min="-15" max="15" step="0.5" value="0" style="min-width:120px" />
+        <span id="offsetVal">0.0s</span>
+      </label>
+    </div>
+    <div class="queue" id="queue"></div>
+  </footer>
+
+  <script src="catalog.js"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="app.js"></script>
+</body>
+</html>
