@@ -12,19 +12,23 @@
     <div id="stars" class="meta">☆☆☆☆☆</div>
     <div id="meta" class="meta"></div>
   </header>
-
   <main class="stage">
     <section class="player-col">
-      <div id="yt"></div>
+      <div class="launch">
+        <p class="hint">Sing King turns off embedding. Audio plays on YouTube or Apple Music. Lyrics and score stay here.</p>
+        <button class="primary" id="openYt">Open on YouTube</button>
+        <button id="openApple">Open in Apple Music</button>
+      </div>
       <div class="now">
         <h2 id="title">Never Enough</h2>
         <p id="artist">The Greatest Showman · Sing King</p>
+        <p class="clock" id="clock">0:00</p>
       </div>
     </section>
     <section class="lyrics" id="stage">
       <div class="score-chip">SCORE<br><strong id="scoreVal">0000</strong></div>
       <div class="line prev" id="prev"></div>
-      <div class="line curr" id="curr">Park the car. Hit Sing Now.</div>
+      <div class="line curr" id="curr">Hit Play when the YouTube track starts.</div>
       <div class="line next" id="next"></div>
       <div class="bars" id="bars" aria-hidden="true">
         <span></span><span></span><span></span><span></span>
@@ -32,13 +36,11 @@
       </div>
     </section>
   </main>
-
   <footer>
     <div class="controls">
       <input id="q" placeholder="Artist - Title, or paste a YouTube URL" />
-      <button class="primary" id="searchBtn">Queue / YouTube</button>
-      <button id="appleBtn">Apple Music</button>
-      <button id="playBtn">Play</button>
+      <button class="primary" id="searchBtn">Queue</button>
+      <button id="playBtn">Play / Sync</button>
       <button id="pauseBtn">Pause</button>
       <button id="nextBtn">Next</button>
       <button id="micBtn">Mic</button>
@@ -50,9 +52,7 @@
     </div>
     <div class="queue" id="queue"></div>
   </footer>
-
   <script src="catalog.js"></script>
-  <script src="https://www.youtube.com/iframe_api"></script>
   <script src="app.js"></script>
 </body>
 </html>
